@@ -1,132 +1,316 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CloudLyne — Managed Cloud & DevOps Solutions</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudLyne | Cloud Services & DevOps Solutions</title>
+  <style>
+    :root {
+      --primary: #0078ff;
+      --secondary: #00b4d8;
+      --bg-light: #ffffff;
+      --bg-dark: #0a192f;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+      --card-bg: #ffffff;
+      --card-dark-bg: #112240;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: background 0.5s;
+    }
+
+    body.dark-mode header {
+      background: rgba(17, 34, 64, 0.95);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .toggle-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: var(--secondary);
+    }
+
+    section {
+      padding: 6rem 3rem;
+      min-height: 80vh;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: white;
+      color: var(--primary);
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      background: #f0f0f0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, background 0.5s;
+    }
+
+    body.dark-mode .card {
+      background: var(--card-dark-bg);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    pre, code {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      display: block;
+      text-align: left;
+    }
+
+    footer {
+      background: #001a33;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="logo" href="index.html"><img src="images/logo.png" alt="CloudLyne logo"></a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Work</a>
-        <a href="blog.html">Blog</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html" class="btn small">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <div class="logo">CloudLyne</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#readme">Docs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="toggle-btn" id="modeToggle">🌙</button>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <h1>Cloud operations & staffing that scale with you</h1>
-          <p>CloudLyne provides managed cloud services, DevOps automation, and on-demand cloud talent to accelerate your product delivery and stabilize your systems.</p>
-          <div class="cta-row">
-            <a href="services.html" class="btn">Our Services</a>
-            <a href="contact.html" class="btn ghost">Request Assessment</a>
-          </div>
-        </div>
-        <div class="hero-media">
-          <img src="images/hero-cloud.jpg" alt="Cloud illustration">
-        </div>
-      </div>
-    </section>
+  <!-- Hero -->
+  <section id="home" class="hero visible">
+    <h1>Empowering Businesses with Smart Cloud Solutions</h1>
+    <p>CloudLyne helps enterprises transform, automate, and scale with next-generation cloud and DevOps solutions.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
 
-    <section class="features wrap">
-      <h2>What we do</h2>
-      <div class="grid-3">
-        <article class="card">
-          <h3>Managed Cloud Services</h3>
-          <p>24/7 monitoring, backup, and incident management across AWS/Azure/GCP.</p>
-          <a href="service-detail.html?topic=managed-cloud">Learn more →</a>
-        </article>
-        <article class="card">
-          <h3>DevOps & Automation</h3>
-          <p>CI/CD, IaC, container orchestration, and release automation to shorten cycles.</p>
-          <a href="service-detail.html?topic=devops">Learn more →</a>
-        </article>
-        <article class="card">
-          <h3>Cloud Staffing</h3>
-          <p>Contract, temp-to-hire, and staff augmentation with certified cloud engineers.</p>
-          <a href="service-detail.html?topic=staffing">Learn more →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="case-preview wrap">
-      <h2>Selected Projects</h2>
-      <div class="grid-2">
-        <div class="project-card">
-          <img src="images/placeholder-1.jpg" alt="">
-          <div class="project-copy">
-            <h3>Fintech Platform — Cloud Migration & Optimization</h3>
-            <p>Migration to AWS with automated pipelines, resulting in 40% infra cost savings and 99.95% uptime.</p>
-            <a href="case-study.html">Read case study →</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="images/placeholder-2.jpg" alt="">
-          <div class="project-copy">
-            <h3>SaaS Company — DevOps Transformation</h3>
-            <p>Introduced IaC, microservices containerization, and automated deployments for faster releases.</p>
-            <a href="case-study.html">Read case study →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonial wrap">
-      <h2>What clients say</h2>
-      <blockquote>
-        “CloudLyne stabilized our production environment and gave us on-demand cloud expertise exactly when we needed it.”<br/>
-        <span class="cite">— CTO, SaaS Provider</span>
-      </blockquote>
-    </section>
-
-    <section class="newsletter wrap">
-      <h2>Get cloud insights</h2>
-      <p>Subscribe to best practices for cloud operations, cost optimization, and DevOps.</p>
-      <form id="newsletter-form" class="small-form">
-        <input type="email" placeholder="Your work email" required>
-        <button class="btn">Subscribe</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <img src="images/logo.png" alt="CloudLyne" class="footer-logo">
-        <p>CloudLyne Solutions Pvt. Ltd.<br>Managed Cloud • DevOps • Staffing</p>
-      </div>
-      <div>
-        <h4>Products & Services</h4>
-        <a href="services.html">Managed Cloud</a>
-        <a href="services.html">DevOps & Automation</a>
-        <a href="services.html">Cloud Staffing</a>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Email: <a href="mailto:info@cloudlyne.com">info@cloudlyne.com</a></p>
-        <p>Careers: <a href="mailto:career@cloudlyne.com">career@cloudlyne.com</a></p>
-      </div>
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="max-width:700px;margin:1rem auto;">CloudLyne is a cloud consulting and DevOps firm optimizing infrastructure for modern enterprises through automation, monitoring, and scalability.</p>
+    <div class="grid">
+      <div class="card"><h3>Mission</h3><p>Deliver seamless cloud solutions that empower innovation and agility.</p></div>
+      <div class="card"><h3>Vision</h3><p>Be the most trusted partner in cloud transformation globally.</p></div>
+      <div class="card"><h3>Values</h3><p>Integrity, reliability, and excellence in every cloud we manage.</p></div>
     </div>
-    <div class="copyright">© 2025 CloudLyne. All rights reserved.</div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" style="background:#f8f9fa;">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card"><h3>Cloud Management</h3><p>24/7 monitoring, optimization, and support for AWS, Azure, and GCP.</p></div>
+      <div class="card"><h3>DevOps Automation</h3><p>CI/CD pipelines, container orchestration, and Infrastructure as Code.</p></div>
+      <div class="card"><h3>Consulting</h3><p>Strategic guidance to migrate, modernize, and optimize your cloud setup.</p></div>
+      <div class="card"><h3>Staffing</h3><p>Hire certified cloud engineers to extend your IT capabilities.</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Our Recent Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Retail Migration</h3><p>Reduced server costs by 45% with AWS automation.</p></div>
+      <div class="card"><h3>Healthcare Platform</h3><p>Implemented HIPAA-compliant infrastructure for secure data.</p></div>
+      <div class="card"><h3>Finance CI/CD</h3><p>Accelerated deployment by 80% using Kubernetes pipelines.</p></div>
+    </div>
+  </section>
+
+  <!-- Careers -->
+  <section id="careers" style="background:#f8f9fa;">
+    <h2>Careers</h2>
+    <p>Join our passionate team of engineers and architects shaping the future of cloud automation.</p>
+    <p>Send your resume to <a href="mailto:career@cloudlyne.com">career@cloudlyne.com</a></p>
+  </section>
+
+  <!-- Documentation Section (README) -->
+  <section id="readme">
+    <h2>📘 Project Documentation</h2>
+    <p><strong>CloudLyne</strong> is a single-page web project that showcases a professional Cloud & DevOps company using HTML, CSS, and JavaScript.</p>
+    <div class="card" style="text-align:left;max-width:900px;margin:2rem auto;">
+<pre><code>
+# Features
+✅ Responsive design
+✅ Smooth scroll + animations
+✅ Dark/Light Mode toggle
+✅ Modern UI layout
+✅ No external libraries
+
+# Setup
+1. Clone repo
+   git clone https://github.com/YOUR-USERNAME/cloudlyne-website.git
+2. Open index.html in browser
+3. Optional: python3 -m http.server 8000
+
+# Contact
+info@cloudlyne.com
+career@cloudlyne.com
+</code></pre>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you!</p>
+    <p>📧 <a href="mailto:info@cloudlyne.com">info@cloudlyne.com</a></p>
+    <p>📍 Bangalore, India</p>
+  </section>
+
+  <footer>
+    <p>© 2025 CloudLyne. All Rights Reserved. | <a href="#home">Back to top</a></p>
   </footer>
 
-<script src="script.js"></script>
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < triggerBottom) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    // Dark mode toggle
+    const toggle = document.getElementById("modeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
