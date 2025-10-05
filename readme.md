@@ -2,9 +2,9 @@ This is a complete, multi-page starter site aligned with CloudLyne identity and 
 
 Swap placeholder images in /images. Use professional cloud imagery for hero and case studies.
 
-''
 
 cloudlyne-site/
+
 ├─ index.html
 ├─ about.html
 ├─ services.html
@@ -25,4 +25,7 @@ cloudlyne-site/
    ├─ team2.jpg
    └─ logo.png
 
-''
+---
+
+
+
