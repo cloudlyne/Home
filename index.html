@@ -1,42 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CloudLyne | Cloud Solutions</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CloudLyne — Managed Cloud & DevOps Solutions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">CloudLyne</h1>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html"><img src="images/logo.png" alt="CloudLyne logo"></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="btn small">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Empowering Your Business with Cloud Innovation</h2>
-    <p>Cloud maintenance, staffing, and automation tailored for enterprises.</p>
-    <a href="services.html" class="btn">Explore Services</a>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <h1>Cloud operations & staffing that scale with you</h1>
+          <p>CloudLyne provides managed cloud services, DevOps automation, and on-demand cloud talent to accelerate your product delivery and stabilize your systems.</p>
+          <div class="cta-row">
+            <a href="services.html" class="btn">Our Services</a>
+            <a href="contact.html" class="btn ghost">Request Assessment</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/hero-cloud.jpg" alt="Cloud illustration">
+        </div>
+      </div>
+    </section>
 
-  <section class="features">
-    <h2>Why Choose CloudLyne?</h2>
-    <div class="feature-grid">
-      <div class="card">24/7 Cloud Support</div>
-      <div class="card">Experienced Engineers</div>
-      <div class="card">Scalable Cloud Solutions</div>
-      <div class="card">Cost-Effective Services</div>
+    <section class="features wrap">
+      <h2>What we do</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Managed Cloud Services</h3>
+          <p>24/7 monitoring, backup, and incident management across AWS/Azure/GCP.</p>
+          <a href="service-detail.html?topic=managed-cloud">Learn more →</a>
+        </article>
+        <article class="card">
+          <h3>DevOps & Automation</h3>
+          <p>CI/CD, IaC, container orchestration, and release automation to shorten cycles.</p>
+          <a href="service-detail.html?topic=devops">Learn more →</a>
+        </article>
+        <article class="card">
+          <h3>Cloud Staffing</h3>
+          <p>Contract, temp-to-hire, and staff augmentation with certified cloud engineers.</p>
+          <a href="service-detail.html?topic=staffing">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-preview wrap">
+      <h2>Selected Projects</h2>
+      <div class="grid-2">
+        <div class="project-card">
+          <img src="images/placeholder-1.jpg" alt="">
+          <div class="project-copy">
+            <h3>Fintech Platform — Cloud Migration & Optimization</h3>
+            <p>Migration to AWS with automated pipelines, resulting in 40% infra cost savings and 99.95% uptime.</p>
+            <a href="case-study.html">Read case study →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/placeholder-2.jpg" alt="">
+          <div class="project-copy">
+            <h3>SaaS Company — DevOps Transformation</h3>
+            <p>Introduced IaC, microservices containerization, and automated deployments for faster releases.</p>
+            <a href="case-study.html">Read case study →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial wrap">
+      <h2>What clients say</h2>
+      <blockquote>
+        “CloudLyne stabilized our production environment and gave us on-demand cloud expertise exactly when we needed it.”<br/>
+        <span class="cite">— CTO, SaaS Provider</span>
+      </blockquote>
+    </section>
+
+    <section class="newsletter wrap">
+      <h2>Get cloud insights</h2>
+      <p>Subscribe to best practices for cloud operations, cost optimization, and DevOps.</p>
+      <form id="newsletter-form" class="small-form">
+        <input type="email" placeholder="Your work email" required>
+        <button class="btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img src="images/logo.png" alt="CloudLyne" class="footer-logo">
+        <p>CloudLyne Solutions Pvt. Ltd.<br>Managed Cloud • DevOps • Staffing</p>
+      </div>
+      <div>
+        <h4>Products & Services</h4>
+        <a href="services.html">Managed Cloud</a>
+        <a href="services.html">DevOps & Automation</a>
+        <a href="services.html">Cloud Staffing</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@cloudlyne.com">info@cloudlyne.com</a></p>
+        <p>Careers: <a href="mailto:career@cloudlyne.com">career@cloudlyne.com</a></p>
+      </div>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2025 CloudLyne. All Rights Reserved.</p>
+    <div class="copyright">© 2025 CloudLyne. All rights reserved.</div>
   </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

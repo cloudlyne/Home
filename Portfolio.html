@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — CloudLyne</title>
+  <title>Work — CloudLyne</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,41 +14,37 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="portfolio.html">Work</a>
+        <a href="portfolio.html" class="active">Work</a>
         <a href="blog.html">Blog</a>
         <a href="careers.html">Careers</a>
-        <a href="contact.html" class="btn small active">Contact</a>
+        <a href="contact.html" class="btn small">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap content">
-    <h1>Contact Us</h1>
-    <p>We’re here to help — reach out for assessments, staffing requests, or to discuss a project.</p>
+    <h1>Our Work</h1>
+    <p>Selected projects that demonstrate how we deliver secure, cost-effective, and scalable cloud solutions.</p>
 
     <div class="grid-2">
-      <div>
-        <h3>Email</h3>
-        <p>General: <a href="mailto:info@cloudlyne.com">info@cloudlyne.com</a></p>
-        <p>Careers: <a href="mailto:career@cloudlyne.com">career@cloudlyne.com</a></p>
+      <article class="project-card">
+        <img src="images/placeholder-1.jpg" alt="">
+        <h3>Fintech Migration</h3>
+        <p>Full migration to AWS with automation and monitoring. Cost savings and resilience achieved.</p>
+        <a href="case-study.html" class="btn small">Read</a>
+      </article>
 
-        <h3>Office (HQ)</h3>
-        <p>CloudLyne Solutions Pvt. Ltd.<br>Electronic City, Bangalore, India</p>
-      </div>
-      <div>
-        <h3>Send a message</h3>
-        <form id="contact-form" class="contact-form">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Work email" required>
-          <input type="text" name="company" placeholder="Company (optional)">
-          <textarea name="message" placeholder="How can we help?" required></textarea>
-          <button class="btn">Send message</button>
-        </form>
-      </div>
+      <article class="project-card">
+        <img src="images/placeholder-2.jpg" alt="">
+        <h3>SaaS Platform Ops</h3>
+        <p>Implemented CI/CD, IaC and a blue/green deployment strategy to reduce downtime during releases.</p>
+        <a href="case-study.html" class="btn small">Read</a>
+      </article>
     </div>
   </main>
 
   <footer class="site-footer">
+    <!-- footer same as others -->
     <div class="wrap footer-grid">
       <div><img src="images/logo.png" alt="CloudLyne" class="footer-logo"><p>CloudLyne Solutions</p></div>
       <div><h4>Services</h4><a href="services.html">All Services</a></div>
