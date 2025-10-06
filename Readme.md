@@ -46,7 +46,7 @@ We help organizations modernize their infrastructure, enhance cloud security, an
 - **Google Fonts** for typography  
 
 ---
-
+```
 ## 📂 Folder Structure
 
 CloudLyne/
@@ -59,7 +59,7 @@ CloudLyne/
 └── assets/ # Logos, icons, and other media
 
 ---
-
+```
 
 ---
 
