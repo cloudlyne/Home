@@ -269,3 +269,30 @@ This project is licensed under the **MIT License** — you are free to use, modi
 ---
 
 > © 2025 CloudLyne. All rights reserved.
+
+
+ <!-- Documentation Section (README) -->
+  <section id="readme">
+    <h2>📘 Project Documentation</h2>
+    <p><strong>CloudLyne</strong> is a single-page web project that showcases a professional Cloud & DevOps company using HTML, CSS, and JavaScript.</p>
+    <div class="card" style="text-align:left;max-width:900px;margin:2rem auto;">
+<pre><code>
+# Features
+✅ Responsive design
+✅ Smooth scroll + animations
+✅ Dark/Light Mode toggle
+✅ Modern UI layout
+✅ No external libraries
+
+# Setup
+1. Clone repo
+   git clone https://github.com/YOUR-USERNAME/cloudlyne-website.git
+2. Open index.html in browser
+3. Optional: python3 -m http.server 8000
+
+# Contact
+info@cloudlyne.com
+career@cloudlyne.com
+</code></pre>
+    </div>
+  </section>
